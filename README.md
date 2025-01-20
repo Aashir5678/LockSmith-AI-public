@@ -3,6 +3,8 @@
 
 A password strength and breach detection web application developed for the seventh UottaHack hackathon by first-year Computer Engineering students from the University of Ottawa.
 
+[LockSmithAI](https://locksmith-ai.onrender.com/)
+
 Team members:
 
 [Rayyan Lodhi](https://www.linkedin.com/in/rayyan-lodhi-002bab1a4/)
@@ -113,9 +115,10 @@ cd LockSmithAI
 ```
 pip install -r requirements.txt
 ```
-
-4. Access the web app at https://locksmith-ai.onrender.com/
-
+4. Run app.py
+5. ```
+   python app.py
+   ```
 # License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
