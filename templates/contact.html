@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LockSmith AI Contact Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">LockSmith AI</div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('about_page') }}">About LockSmith AI</a></li>
+                <li><a href="{{ url_for('home_page') }}">Homepage</a></li>
+                <li><a href="/">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Contact Us</h1>
+            <p>We value your feedback! Unlock the lock to access the survey link.</p>
+            
+            <!-- Lock Animation Section -->
+            <div id="lock-container">
+                <img id="lock-static" src="/static/images/lock-static.png" alt="Static Lock">
+                <img id="lock-gif" class="hidden" src="/static/images/lock-unlock.gif" alt="Unlocking Lock">
+            </div>
+
+            <!-- Take Survey Button -->
+            <a href="{{ feedback_form_url }}" target="_blank" id="survey-button" class="btn2">Take the Survey</a>
+        </div>
+    </section>
+    <footer>
+        <p>© 2025 made for Uottahack 7</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='javascript/app.js') }}"></script>
+</body>
+</html>
+
+
+
+

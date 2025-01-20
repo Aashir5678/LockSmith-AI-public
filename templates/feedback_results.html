@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">LockSmith AI</div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home_page') }}">Homepage</a></li>
+                <li><a href="{{ url_for('about_page') }}">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Feedback Results</h1>
+            <ul>
+                {% for response in feedback.get("data", []) %}
+                    <li>
+                        <strong>Response ID:</strong> {{ response.id }}
+                        <div><strong>Answers:</strong> {{ response.pages }}</div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <p>© 2025 made for Uottahack 7</p>
+    </footer>
+</body>
+</html>
+

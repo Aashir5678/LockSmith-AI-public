@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LockSmith AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script defer src="{{ url_for('static', filename='javascript/app.js') }}"></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">LockSmith AI</div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('about_page') }}">About LockSmith AI</a></li>
+                <li><a href="{{ url_for('contact_page') }}">Contact the Team</a></li>
+                <li><a href="/">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <form id="loginForm" method="POST">
+
+                <input type="text" class="text-box" name="username" placeholder="Enter the username/email you want to evalutate ..." required>
+
+
+                <input type="password" class="text-box" name="password" placeholder="Enter your password used with that username/email for evaluation....." required>
+
+
+                <input type="submit" class="btn submit-btn" value="Submit">
+
+            </form>
+
+            <h1>LockSmith AI</h1>
+            <p class="hero-text">Evaluate your password with AI and check for password leaks (press enter after typing your password)</p>
+        </div>
+    </section>
+    <footer>
+        <p>© 2025 made for Uottahack 7</p>
+    </footer>
+
+    <script>
+        // The JavaScript code for handling the typing effect goes here
+        document.addEventListener("DOMContentLoaded", () => {
+            const textBoxes = document.querySelectorAll(".text-box");
+            const placeholderTexts = {
+                username:"Enter the username/email you want to evalutate ...",
+                password: "Enter your password used with that username/email for evaluation....."
+            };
+
+            let typingInterval;
+
+            const startTypingEffect = (textBox, placeholderText) => {
+                let currentText = "";
+                let index = 0;
+
+                clearInterval(typingInterval);
+
+                typingInterval = setInterval(() => {
+                    if (index < placeholderText.length) {
+                        currentText += placeholderText[index];
+                        textBox.setAttribute("placeholder", currentText);
+                        index++;
+                    } else {
+                        clearInterval(typingInterval); 
+                    }
+                }, 100);
+            };
+
+            textBoxes.forEach((textBox) => {
+                textBox.addEventListener("focus", () => {
+                    textBox.setAttribute("placeholder", "");
+                    const placeholderText = textBox.name === "password" ? placeholderTexts.password : placeholderTexts.username;
+                    startTypingEffect(textBox, placeholderText);
+                });
+
+                textBox.addEventListener("blur", () => {
+                    const placeholderText = textBox.name === "password" ? placeholderTexts.password : placeholderTexts.username;
+                    textBox.setAttribute("placeholder", placeholderText);
+                    clearInterval(typingInterval);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
