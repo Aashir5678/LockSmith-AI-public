@@ -4,7 +4,7 @@
 A password strength and breach detection web application developed for the seventh UottaHack hackathon by first-year Computer Engineering students from the University of Ottawa.
 
 
-[LockSmithAI](https://locksmith-ai.onrender.com/)
+Website: [LockSmithAI](https://locksmith-ai.onrender.com/)
 
 
 
