@@ -5,7 +5,8 @@ A password strength and breach detection web application developed for the seven
 
 [LockSmithAI](https://locksmith-ai.onrender.com/)
 
-Team members:
+
+*Team members*:
 
 [Rayyan Lodhi](https://www.linkedin.com/in/rayyan-lodhi-002bab1a4/)
 
