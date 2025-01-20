@@ -6,7 +6,6 @@ import pickle
 import numpy as np
 import pandas as pd
 
-# Uses the following data set for training: https://www.kaggle.com/datasets/bhavikbb/password-strength-classifier-dataset/data\
 # 0 - weak password, 1 - medium password, 2 - strong password
 DATA_SIZE = 10000
 
