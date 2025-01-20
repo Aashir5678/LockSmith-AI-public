@@ -1,0 +1,34 @@
+- Retail Monkey
+- Groq (maybe)
+
+
+Overall idea:
+- Create a website using freedomain (mlh domain)
+- Advanced Password Manager with Encryption 
+
+
+	Features:
+		- Use AI to create advanced passwords
+		- Use AI to rate password on score 
+			- UI with some bar on a score of 10 (complete UI challenge)
+
+		- Be able to parse breached data and return if data breached
+			- Should parse through a giant txt file, storing data in MySQL
+			- Have a front-end where users are able to prompt/check if their data has been breached
+			- 
+
+		- Use Retail Monkey to create feedback form 
+			- some contact form/page with SurveyMonkey
+
+		- See if we can utilize Gadget
+		
+		- Cool lock idea:
+			- Depending on the strength rating of the password, a locked lock will rattle (the higher the rating the more rattling), if the password
+			is strong the lock will rattle a little, if it is very weak, it will rattle vigirously and unlock, showing the password is unsafe to use.
+
+
+Assignments:
+- Agam works on UI
+- Rayyan works on Data processing of txt file (and updating database)
+- Aashir works on (Groq?) to create advanced passwords/rate on a score of 10
+- Prad works on the Retail

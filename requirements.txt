@@ -1,0 +1,11 @@
+scikit-learn
+flask
+groq
+numpy
+pandas
+matplotlib
+requests
+openai
+sqlalchemy
+flask_sqlalchemy
+python-dotenv
